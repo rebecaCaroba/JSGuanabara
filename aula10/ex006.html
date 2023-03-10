@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: #57579c;
+            color: #f5b71b;
+        }
+
+        #area {
+            background-color: #295d04;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body> 
+    <!--<div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> -->
+    <div id="area">
+        Interaja
+    </div>
+    <script>
+        var a = document.querySelector('div#area')
+        a.addEventListener('click' , clicar)
+        a.addEventListener('mouseenter' , entrar)
+        a.addEventListener('mouseout', sair)
+        function clicar() {
+            a.style.background = 'white'
+            a.style.color = 'black'
+            a.innerText = 'Clicou!'
+        }
+        function entrar() {
+            a.style.color = 'white'
+            a.style.background = 'gold'
+            a.innerText = 'Entrou!'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'darkblue'
+        }
+    </script>
+</body>
+</html>

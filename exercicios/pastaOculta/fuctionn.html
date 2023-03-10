@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Números únicos</title>
+    <style>
+      /* CSS para estilizar a página */
+    </style>
+  </head>
+  <body>
+    <h1>Digite números únicos</h1>
+    <input type="number" id="inputNumber">
+    <button onclick="addNumber(document.getElementById('inputNumber').value)">Adicionar</button>
+    <br>
+    <div id="numbers"></div>
+    <script>
+      // Variável para armazenar os números digitados
+      let numbers = []
+
+      function addNumber(inputNumber) {
+        // Verifica se o número já foi digitado antes
+        if (numbers.indexOf(inputNumber) !== -1) {
+          alert("Esse número já foi digitado antes!");
+        } else {
+          // Adiciona o número à lista de números
+          numbers.push(inputNumber);
+
+          // Cria um elemento <p> para exibir o número
+          let numberElement = document.createElement("p");
+          numberElement.innerHTML = inputNumber;
+
+          // Adiciona o elemento <p> à div "numbers"
+          document.getElementById("numbers").appendChild(numberElement);
+        }
+      }
+    </script>
+  </body>
+</html>

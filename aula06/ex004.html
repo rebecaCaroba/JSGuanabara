@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            background-color: #663399;
+            color: #fff;
+        }
+        h1 {
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <h1>Programando com Java script</h1>
+    <script>
+        var nome = window.prompt('Qual é seu nome?')
+        document.write(`Olá, ${nome}. Seu nome tem ${nome.length} letras <br>`) //escrever na pagina
+        document.write(`Seu nome em <strong>MAIÚSCULAS</strong>: ${nome.toUpperCase()} <br>`)
+        document.write(`Seu nome em minusculas é: ${nome.toLowerCase()}`)
+    </script>
+</body>
+</html>
